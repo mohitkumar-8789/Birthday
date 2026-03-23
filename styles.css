@@ -1,0 +1,247 @@
+:root {
+  --bg-1: #2d1e40;
+  --bg-2: #6a3093;
+  --bg-3: #f6d365;
+  --card: rgba(255, 255, 255, 0.12);
+  --text: #fff7fd;
+  --subtle: #f3dff5;
+  --accent: #ffd166;
+  --accent-2: #ff8fab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2), #a044ff);
+  min-height: 100vh;
+}
+
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle at 20% 20%, #ffffff30 0, #ffffff00 45%),
+    radial-gradient(circle at 80% 30%, #ffd6e730 0, #ffffff00 35%),
+    radial-gradient(circle at 65% 75%, #fff3b330 0, #ffffff00 40%);
+}
+
+.hero,
+.section,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  max-width: 760px;
+  background: var(--card);
+  border: 1px solid #ffffff26;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  box-shadow: 0 10px 30px #0000002e;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 4.2rem);
+  line-height: 1.1;
+  margin: 1rem 0;
+}
+
+h1 span {
+  font-family: "Great Vibes", cursive;
+  color: var(--accent);
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+.hero-message {
+  color: var(--subtle);
+  font-size: 1.08rem;
+  max-width: 62ch;
+  margin-inline: auto;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  color: #32162f;
+  background: linear-gradient(120deg, var(--accent), var(--bg-3));
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+.section {
+  width: min(1100px, 92%);
+  margin: 2.5rem auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  margin-bottom: 0.3rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--subtle);
+  margin-top: 0;
+}
+
+.message-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.message-card,
+.player-card {
+  background: var(--card);
+  border: 1px solid #ffffff22;
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px #0000002a;
+}
+
+.message-card h3 {
+  margin: 0.3rem 0 0.5rem;
+  color: var(--accent);
+}
+
+.message-card p {
+  margin: 0;
+  color: var(--subtle);
+}
+
+.gallery-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.photo-card {
+  margin: 0;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 0.4rem;
+  border: 1px solid #ffffff2e;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.player-section {
+  margin-bottom: 3rem;
+}
+
+.player-card {
+  max-width: 600px;
+  margin: 0.8rem auto 0;
+  text-align: center;
+}
+
+.now-playing-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--subtle);
+}
+
+#track-title {
+  margin: 0.5rem 0 1rem;
+  color: var(--accent);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.controls button {
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  background: linear-gradient(140deg, #ffd166, #ff8fab);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.controls button:hover {
+  transform: scale(1.04);
+}
+
+.playlist {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.playlist button {
+  width: 100%;
+  border: 1px solid #ffffff20;
+  background: #ffffff10;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.7rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.playlist button.active {
+  border-color: #ffd166;
+  background: #ffd1662a;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.8rem 1rem 2.5rem;
+  color: var(--subtle);
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 1.4rem;
+  }
+}

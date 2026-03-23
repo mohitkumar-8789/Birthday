@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, My Dear Friend!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="floating-hearts" aria-hidden="true"></div>
+
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">A small surprise for you</p>
+        <h1>Happy Birthday, <span>Jeevitha</span>!</h1>
+        <p class="hero-message">
+          Today is all about your smile, your dreams, and the magic you bring
+          into our friendship. You deserve endless happiness.
+        </p>
+        <a class="cta-btn" href="#gallery">See Your Memories</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section messages" id="messages">
+        <h2>Birthday Wishes For You</h2>
+        <div class="message-grid">
+          <article class="message-card">
+            <h3>You Are Sunshine</h3>
+            <p>
+              You make ordinary days feel special for us . Specially for the person like me 😅.
+            </p>
+          </article>
+          <article class="message-card">
+            <h3>Keep Shining</h3>
+            <p>
+              May this year bring you exciting adventures, pure joy, and every
+              success your heart has been waiting for ,  As well as let's hope for some more trips and adventures together 🥳.
+            </p>
+          </article>
+          <article class="message-card">
+            <h3>Always happy</h3>
+            <p>
+              No matter how much classes we will bunk together as a group but at the end of the day we will find the way to laugh and have fun together 🤣.(like what u both did to me in yesterday's class)_
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <h2>Our Beautiful Moments</h2>
+        <p class="section-subtitle">
+          
+          <code></code>.
+        </p>
+        <div class="gallery-grid">
+          <figure class="photo-card">
+            <img
+              src="p1.jpeg"
+              alt="Birthday memory photo 1"
+              onerror="this.src='https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80';"
+            />
+          </figure>
+          <figure class="photo-card">
+            <img
+              src="p2.jpeg"
+              alt="Birthday memory photo 2"
+              onerror="this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80';"
+            />
+          </figure>
+          <figure class="photo-card">
+            <img
+              src="p3.jpeg"
+              alt="Birthday memory photo 3"
+              onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80';"
+            />
+          </figure>
+          <figure class="photo-card">
+            <img
+              src="p4.jpeg"
+              alt="Birthday memory photo 4"
+              onerror="this.src='https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=900&q=80';"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section player-section" id="songs">
+        <h2>Songs For your Special Day</h2>
+        <p class="section-subtitle">
+          Tap play and let the celebration begin.
+        </p>
+
+        <div class="player-card">
+          <p class="now-playing-label">Now Playing</p>
+          <h3 id="track-title">Birthday Vibes</h3>
+          <audio id="audio-player"></audio>
+
+          <div class="controls">
+            <button id="prev-btn" aria-label="Previous song">⏮</button>
+            <button id="play-btn" aria-label="Play or pause">▶</button>
+            <button id="next-btn" aria-label="Next song">⏭</button>
+          </div>
+
+          <ul id="playlist" class="playlist" aria-label="Song playlist"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Made with love, hugs, and birthday sparkle ✨
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
